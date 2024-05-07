@@ -494,19 +494,19 @@
             </li>
           </ul>
         </div>
-        <form class="footer-form" name="subscribe" autocomplete="on">
-          <label class="subscribe-label">
-            Subscribe
-            <input
-              class="footer-email__input"
-              type="email"
-              placeholder="E-mail"
-              id="footer-email"
-              name="e-mail"
-              value=""
-            />
-          </label>
-          <label class="footer-button-label" for="footer-button">
+        <div class="container-for-form">
+          <p class="subscribe__text">Subscribe</p>
+          <form class="footer-form" name="subscribe" autocomplete="on">
+            <label class="subscribe-label">
+              <input
+                class="footer-email__input"
+                type="email"
+                placeholder="E-mail"
+                id="footer-email"
+                name="e-mail"
+                value=""
+              />
+            </label>
             <button
               type="submit"
               class="footer-button"
@@ -514,79 +514,99 @@
               name="subscribe-button"
             >
               Subscribe
+              <svg class="telegram-svg" width="24" height="24">
+                <use href="./images/icons.svg#icon-telegram"></use>
+              </svg>
             </button>
-            <svg class="telegram-svg" width="24" height="24">
-              <use href="./images/icons.svg#icon-telegram"></use>
-            </svg>
-          </label>
-        </form>
+          </form>
+        </div>
       </div>
     </footer>
     <!--~~~~~~~~~~~~~~~~~~~~~modal-window~~~~~~~~~~~~~~~~~~~~~~~~-->
-    <div class="modal-overlay">
+    <div class="modal-overlay is-open">
       <div class="modal-window-inner">
         <!-- 0 close -->
         <button type="button" class="button-modal-close">
           <svg class="close-modal" width="8" height="8">
-            <use href="/images/icons.svg#icon-close-black-18dp"></use>
+            <use href="./images/icons.svg#icon-close-black-18dp"></use>
           </svg>
         </button>
         <!-- title -->
-        <h2 class="modal__title">
-          Leave your contacts and we will call you back
-        </h2>
+        <p class="modal__text">Leave your contacts and we will call you back</p>
         <!-- ~~~~~~~~~~~form~~~~~~~~~ -->
         <form class="modal-form" name="form-modal" autocomplete="on">
           <!-- 1 text-->
-          <label class="label-modal-input">
-            Name
-            <svg class="modal__svg" width="18" height="18">
-              <use href="/images/icons.svg#icon-name"></use>
-            </svg>
-            <input
-              type="text"
-              name="my-name"
-              class="modal__input"
-              required
-              autofocus
-            />
-          </label>
+          <div class="container-for-lable">
+            <label class="label-modal-input" for="user-name">Name</label>
+            <div class="container-for-inputsvg">
+              <input
+                type="text"
+                name="user-name"
+                class="modal__input"
+                required
+                autofocus
+                id="user-name"
+              />
+              <svg class="modal__svg" width="18" height="18">
+                <use href="/images/icons.svg#icon-name"></use>
+              </svg>
+            </div>
+          </div>
           <!-- 2 tel -->
-          <label class="label-modal-input">
-            Phone
-            <svg class="modal__svg" width="18" height="18">
-              <use href="/images/icons.svg#icon-phone"></use>
-            </svg>
-            <input type="tel" name="my-phone" class="modal__input" required />
-          </label>
+          <div class="container-for-lable">
+            <label class="label-modal-input" for="user-phone">Phone</label>
+            <div class="container-for-inputsvg">
+              <input
+                type="tel"
+                name="user-phone"
+                class="modal__input"
+                id="user-phone"
+                required
+              />
+              <svg class="modal__svg" width="18" height="18">
+                <use href="/images/icons.svg#icon-phone"></use>
+              </svg>
+            </div>
+          </div>
           <!-- 3 email -->
-          <label class="label-modal-input">
-            Email
-            <svg class="modal__svg" width="18" height="18">
-              <use href="/images/icons.svg#icon-mail"></use>
-            </svg>
-            <input type="email" name="my-mail" class="modal__input" required />
-          </label>
+          <div class="container-for-lable">
+            <label class="label-modal-input" for="user-email">Email</label>
+            <div class="container-for-inputsvg">
+              <input
+                type="email"
+                name="user-email"
+                class="modal__input"
+                id="user-email"
+                required
+              />
+              <svg class="modal__svg" width="18" height="18">
+                <use href="/images/icons.svg#icon-mail"></use>
+              </svg>
+            </div>
+          </div>
           <!-- 4 textarea -->
-          <label class="label-modal-textarea">
-            Comment
+          <div class="container-for-textarea">
+            <label class="label-modal-textarea" for="user-comment"
+              >Comment</label
+            >
             <textarea
-              name="my-feedback"
+              name="user-comment"
               class="modal__textarea"
               placeholder="Text input"
               rows="5"
+              id="user-comment"
             ></textarea>
-          </label>
+          </div>
           <!-- 5 checkbox -->
           <div class="container-for-checkbox">
             <input
               type="checkbox"
-              name="accept"
-              class="modal-checkbox-input"
-              value="I accept"
-              id="modal-checkbox"
+              name="user-privacy"
+              class="visually-hidden"
+              value="true"
+              id="user-privacy"
             />
-            <label class="for-check-label" for="modal-checkbox">
+            <label class="for-check-label" for="user-privacy">
               <span class="for-check">
                 <svg class="checkbox__svg" width="10" height="8">
                   <use href="./images/icons.svg#icon-checkbox"></use>
