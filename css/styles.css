@@ -735,7 +735,6 @@ img {
   margin-bottom: 16px;
 }
 
-
 /* ''''''стилізація 3-х інпутів'''''''' */
 
 .container-for-label {
@@ -752,8 +751,8 @@ img {
 }
 
 .container-input-svg {
-	position: relative;
-  }
+  position: relative;
+}
 
 .modal__input {
   border: 1px solid rgba(46, 47, 66, 0.4);
@@ -767,7 +766,6 @@ img {
   font-family: inherit;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 
 .modal__svg {
   fill: #2e2f42;
@@ -785,7 +783,6 @@ img {
 .container-for-label:focus-within .modal__svg {
   fill: #4d5ae5;
 }
-
 
 /* '''''''textarea''''''''''  */
 
@@ -860,17 +857,15 @@ img {
   align-items: center;
   justify-content: center;
   fill: transparent;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.visually-hidden + .for-check-label > .for-check {
   width: 16px;
   height: 16px;
   background-color: transparent;
-  fill: none;
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 2px;
   margin-right: 8px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .visually-hidden:checked + .for-check-label > .for-check {
@@ -881,7 +876,8 @@ img {
 
 /* button in modal */
 .modal-button {
-	margin-left: 95px;
+  display: block;
+  margin: 0 auto;
   border-radius: 4px;
   border: none;
   min-width: 169px;
